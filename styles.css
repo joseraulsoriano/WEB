@@ -1,0 +1,137 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    color: #00ffcc;
+}
+
+/* Fuente Futurista (opcional) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.form-container {
+    background: rgba(15, 15, 15, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #00ffcc;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5), 0 0 40px rgba(0, 255, 204, 0.3);
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 255, 204, 0.5), 0 0 40px rgba(0, 255, 204, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(0, 255, 204, 0.8), 0 0 60px rgba(0, 255, 204, 0.5);
+    }
+}
+
+.form-container h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #00ffcc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #00ffcc;
+    text-align: left;
+    font-size: 14px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #00ffcc;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #00ffcc;
+    background: rgba(0, 0, 0, 0.5);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container input:focus {
+    border-color: #00ffcc;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background: #00ffcc;
+    color: #0f0f0f;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container button:hover {
+    background: #00e6b8;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.6);
+}
+
+.form-container button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 255, 204, 0.6);
+}
+
+/* Efecto de fondo animado futurista */
+body::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 255, 204, 0.1) 10%, transparent 10.01%);
+    background-size: 20px 20px;
+    animation: moveBackground 10s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveBackground {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(20px, 20px);
+    }
+}
+
+/* Efecto de neón en los textos */
+.neon-text {
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+}
+
+/* Animación de brillo en los inputs */
+@keyframes inputGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 255, 204, 0.8);
+    }
+}
+
+.form-container input:focus {
+    animation: inputGlow 1.5s infinite alternate;
+}
